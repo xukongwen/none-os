@@ -7,7 +7,7 @@
 %'./.hidden/pipes/dirs/.config/nvim'='~/.config/nvim'
 %安装软件
 %='echo -e 'return {{"www9song/fcitx5-nvim-zh"},{"folke/zen-mode.nvim"}}' > ~/.config/nvim/lua/plugins/custom.lua'
-'./configs/yang'='~/'
+'.'='~/'
 %删除默认用户文件夹，以防止安装完成后默认文件夹出错
 neovim="rm -rf ~/.config/user-dirs.dirs"
 git
