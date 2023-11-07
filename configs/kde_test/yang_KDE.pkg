@@ -12,7 +12,7 @@ git
 
 %KDE相关模块
 xorg
-plasma
+plasma=sddm
 plasma-wayland-session
 kde-applications
 
