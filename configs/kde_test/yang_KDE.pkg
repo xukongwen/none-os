@@ -1,16 +1,15 @@
 %基本规则说明。双引号表示在root权限下:执行命令。单引号表示在用户权限下执行命令
-%先清除github本地下载总目录 
+
+%本地执行命令以@开始，并且双引号包裹。 
 @"rm -rf ./.hidden/pipes/dirs"
-%先在本机执行clone LazyVim 插件
-%@"mkdir -p ./.hidden/pipes/dirs/.config && git clone https://github.com/LazyVim/starter ./.hidden/pipes/dirs/.config/nvim"
-%通过管道把下载的结果，以用户权限拷贝到安装后的目录 如果双引号表示root权限执行拷贝
-%'./.hidden/pipes/dirs/.config/nvim'='~/.config/nvim'
-%安装软件
-%='echo -e 'return {{"www9song/fcitx5-nvim-zh"},{"folke/zen-mode.nvim"}}' > ~/.config/nvim/lua/plugins/custom.lua'
-'./configs/yang'='~/'
-%删除默认用户文件夹，以防止安装完成后默认文件夹出错
+
+%管道：用于复制文件。单引号用户权限复制，双引号root权限复制
+%'.'='~/'
+
+%安装软件，等号左边是要安装的名称，右边是服务、命令。可多元组合用双逗号(;;)分开。以下意思是安装完软件，用root权限删除文件
 neovim="rm -rf ~/.config/user-dirs.dirs"
 git
+
 %KDE相关模块
 xorg
 plasma
@@ -32,12 +31,14 @@ obsidian
 baidunetdisk-bin
 xunlei-bin
 netease-cloud-music
+%本地下载一堆东西。然后通过管道复制到安装机器
 @"mkdir -p ./.hidden/pipes/dirs/qv2ray"
 @"wget  'https://github.com/Qv2ray/QvPlugin-SS/releases/download/v3.0.0/QvPlugin-SS.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-SS.v3.0.0.linux-x64.so"
 @"wget 'https://github.com/Qv2ray/QvPlugin-Trojan/releases/download/v3.0.0/QvPlugin-Trojan.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-Trojan.v3.0.0.linux-x64.so"
 @"wget 'https://github.com/Qv2ray/QvPlugin-SSR/releases/download/v3.0.0/QvPlugin-SSR.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-SSR.v3.0.0.linux-x64.so"
 @"wget 'https://github.com/Qv2ray/QvPlugin-NaiveProxy/releases/download/v3.0.0/QvPlugin-NaiveProxy.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-NaiveProxy.v3.0.0.linux-x64.so"
-"./.hidden/pipes/dirs/qv2ray"="/usr/share/qv2ray/plugins"
+"./.hidden/pipes/dirs/qv2ray/."="/usr/share/qv2ray/plugins"
+
 qv2ray='echo "https://bava8u2znaj6bdzzjnfb.wgetcloud.online/link/xPusTZVnVXT2epu" > ~/url'
 v2ray
 visual-studio-code-bin
@@ -51,9 +52,12 @@ open-vm-tools
 qqmusic-bin
 text-engine
 libbacktrace-git
+%vivaldi
+%alacritty
 deepin-wine6-stable
 deepin-wine-helper
 deepin-wine-wechat
 lib32-udis86-git
+%前面加括号，表示是该安装包的安装条件。只有当括号内命令有输出才安装
 ("echo $(lspci | grep VGA) | grep NVIDIA")nvidia="sed -i 's/kms //g' /etc/mkinitcpio.conf";;"mkinitcpio -P"
 ("echo $(lspci | grep VGA) | grep NVIDIA")nvidia-settings
