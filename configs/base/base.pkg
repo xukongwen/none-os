@@ -34,6 +34,8 @@ v2ray
 extension-manager
 gnome-tweaks
 
+text-engine
+libbacktrace-git
 %前面加括号，表示是该安装包的安装条件。只有当括号内命令有输出才安装
 ("echo $(lspci | grep VGA) | grep NVIDIA")nvidia="sed -i 's/kms //g' /etc/mkinitcpio.conf";;"mkinitcpio -P"
 ("echo $(lspci | grep VGA) | grep NVIDIA")nvidia-settings
