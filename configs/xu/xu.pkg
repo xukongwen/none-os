@@ -49,9 +49,10 @@ deepin-wine-wechat
 lib32-udis86-git
 qtile
 rofi
-v2raya-bin=v2raya-lite
+v2raya-bin=v2raya
 "v2raya"="/etc"
-firfox
+firefox
+fish
 %支持复制粘贴
 xclip
 %前面加括号，表示是该安装包的安装条件。只有当括号内命令有输出才安装
