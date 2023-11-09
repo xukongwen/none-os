@@ -27,16 +27,7 @@ obsidian
 baidunetdisk-bin
 xunlei-bin
 netease-cloud-music
-%本地下载一堆东西。然后通过管道复制到安装机器
-@"mkdir -p ./.hidden/pipes/dirs/qv2ray"
-@"wget  'https://github.com/Qv2ray/QvPlugin-SS/releases/download/v3.0.0/QvPlugin-SS.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-SS.v3.0.0.linux-x64.so"
-@"wget 'https://github.com/Qv2ray/QvPlugin-Trojan/releases/download/v3.0.0/QvPlugin-Trojan.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-Trojan.v3.0.0.linux-x64.so"
-@"wget 'https://github.com/Qv2ray/QvPlugin-SSR/releases/download/v3.0.0/QvPlugin-SSR.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-SSR.v3.0.0.linux-x64.so"
-@"wget 'https://github.com/Qv2ray/QvPlugin-NaiveProxy/releases/download/v3.0.0/QvPlugin-NaiveProxy.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-NaiveProxy.v3.0.0.linux-x64.so"
-"./.hidden/pipes/dirs/qv2ray/."="/usr/share/qv2ray/plugins"
 
-qv2ray='echo "https://bava8u2znaj6bdzzjnfb.wgetcloud.online/link/xPusTZVnVXT2epu" > ~/url'
-v2ray
 visual-studio-code-bin
 google-chrome
 xmind
@@ -52,6 +43,9 @@ libbacktrace-git
 gnome-tweaks
 %vivaldi
 %alacritty
+v2raya-bin=v2raya
+"v2raya"="/etc"
+
 deepin-wine6-stable
 deepin-wine-helper
 deepin-wine-wechat

@@ -4,7 +4,7 @@
 @"rm -rf ./.hidden/pipes/dirs"
 
 %管道：用于复制文件。单引号用户权限复制，双引号root权限复制
-'.'='~/'
+'configs/.'='~/'
 
 %安装软件，等号左边是要安装的名称，右边是服务、命令。可多元组合用双逗号(;;)分开。以下意思是安装完软件，用root权限删除文件
 neovim="rm -rf ~/.config/user-dirs.dirs"
