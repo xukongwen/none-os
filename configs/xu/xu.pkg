@@ -38,8 +38,8 @@ neofetch
 open-vm-tools
 qqmusic-bin
 extension-manager
-%text-engine
-%libbacktrace-git
+text-engine
+libbacktrace-git
 gnome-tweaks
 vivaldi
 alacritty
