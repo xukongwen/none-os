@@ -8,6 +8,7 @@
 
 %安装软件，等号左边是要安装的名称，右边是服务、命令。可多元组合用双逗号(;;)分开。以下意思是安装完软件，用root权限删除文件
 neovim="rm -rf ~/.config/user-dirs.dirs"
+xclip
 git
 
 %安装软件，并且开启gdm的服务
