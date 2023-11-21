@@ -21,16 +21,8 @@ fcitx5-rime="echo -e 'GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fc
 rime-ice-git='mkdir -p ~/.config/fcitx5/conf && echo -e "# 垂直候选列表\nVertical Candidate List=False\n# 使用鼠标滚轮翻页\nWheelForPaging=True\n# 字体\nFont="KKong3 13"\n# 菜单字体\nMenuFont="KKong3 12"\n# 托盘字体\nTrayFont="KKong 12"\n# 托盘标签轮廓颜色\nTrayOutlineColor=#000000\n# 托盘标签文本颜色\nTrayTextColor=#ffffff\n# 优先使用文字图标\nPreferTextIcon=False\n# 在图标中显示布局名称\nShowLayoutNameInIcon=True\n# 使用输入法的语言来显示文字\nUseInputMethodLanguageToDisplayText=True\n# 主题\nTheme=macOS-dark\n# 深色主题\nDarkTheme=macOS-dark\n# 跟随系统浅色/深色设置\nUseDarkTheme=False\n# 当被主题和桌面支持时使用系统的重点色\nUseAccentColor=True\n# 在 X11 上针对不同屏幕使用单独的 DPI\nPerScreenDPI=True\n# 固定 Wayland 的字体 DPI\nForceWaylandDPI=0\n# 在 Wayland 下启用分数缩放\nEnableFractionalScale=True" > ~/.config/fcitx5/conf/classicui.conf'
 openssh=sshd;;"echo -e '\nPermitRootLogin yes' >> '/etc/ssh/sshd_config'"
 
-%本地下载一堆东西。然后通过管道复制到安装机器
-@"mkdir -p ./.hidden/pipes/dirs/qv2ray"
-@"wget  'https://github.com/Qv2ray/QvPlugin-SS/releases/download/v3.0.0/QvPlugin-SS.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-SS.v3.0.0.linux-x64.so"
-@"wget 'https://github.com/Qv2ray/QvPlugin-Trojan/releases/download/v3.0.0/QvPlugin-Trojan.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-Trojan.v3.0.0.linux-x64.so"
-@"wget 'https://github.com/Qv2ray/QvPlugin-SSR/releases/download/v3.0.0/QvPlugin-SSR.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-SSR.v3.0.0.linux-x64.so"
-@"wget 'https://github.com/Qv2ray/QvPlugin-NaiveProxy/releases/download/v3.0.0/QvPlugin-NaiveProxy.v3.0.0.linux-x64.so' -O ./.hidden/pipes/dirs/qv2ray/QvPlugin-NaiveProxy.v3.0.0.linux-x64.so"
-"./.hidden/pipes/dirs/qv2ray/."="/usr/share/qv2ray/plugins"
-
-qv2ray='echo "https://bava8u2znaj6bdzzjnfb.wgetcloud.online/link/xPusTZVnVXT2epu" > ~/url'
-v2ray
+v2raya-bin=v2raya
+"v2raya"="/etc"
 
 extension-manager
 gnome-tweaks
