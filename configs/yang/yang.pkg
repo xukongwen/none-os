@@ -7,13 +7,15 @@
 'configs/.'='~/'
 
 %安装软件，等号左边是要安装的名称，右边是服务、命令。可多元组合用双逗号(;;)分开。以下意思是安装完软件，用root权限删除文件
+%默认的一些必须软件
 neovim="rm -rf ~/.config/user-dirs.dirs"
 xclip
 git
 %samba=smb
 avahi=avahi-daemon;;"echo -e '# Name Service Switch configuration file.\n# See nsswitch.conf(5) for details.\n\npasswd: files systemd\ngroup: files [SUCCESS=merge] systemd\nshadow: files systemd\ngshadow: files systemd\n\npublickey: files\nhosts: files mymachines myhostname mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns\n\nnetworks: files\n\nprotocols: files\nservices: files\nethers: files\nrpc: files\n\nnetgroup: files\n' > /etc/nsswitch.conf"
 nss-mdns
-%x11vnc="mkdir -p /etc/systemd/system/x11vnc.service.d && echo '[Service]\nExecStart=\nExecStart=/usr/bin/x11vnc -many -display :0 -no6 -rfbport 5901 -auth /var/run/lightdm/root/:0\n\n[Install]\nWantedBy=graphical.target' > /etc/systemd/system/x11vnc.service.d/override.conf"
+nm-connection-editor
+x11vnc
 
 %安装软件，并且开启gdm的服务
 gnome=gdm
