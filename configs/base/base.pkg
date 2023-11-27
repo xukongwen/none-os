@@ -27,6 +27,7 @@ v2raya-bin=v2raya
 
 extension-manager
 gnome-tweaks
+gnome-session-properties
 
 text-engine 
 libbacktrace-git

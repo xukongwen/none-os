@@ -22,12 +22,18 @@ gnome=gdm
 %'fcitx5 &';;'sed -i '129{h;d}; 130{p;g};'  ~/.local/share/fcitx5/rime/build/default.yaml'
 fcitx5-im
 fcitx5-rime="echo -e 'GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx\nSDL_IM_MODULE=fcitx\nGLFW_IM_MODULE=ibus' > '/etc/environment'"
-
-%@"mkdir -p ./.hidden/pipes/dirs/themes && git clone https://github.com/thep0y/fcitx5-themes.git ./.hidden/pipes/dirs/themes"
-%'./.hidden/pipes/dirs/themes'='~/.local/share/fcitx5/themes'
-%='mkdir -p ~/.config/fcitx5/conf && echo -e "# 垂直候选列表\nVertical Candidate List=False\n# 使用鼠标滚轮翻页\nWheelForPaging=True\n# 字体\nFont="KKong3 13"\n# 菜单字体\nMenuFont="KKong3 12"\n# 托盘字体\nTrayFont="KKong 12"\n# 托盘标签轮廓颜色\nTrayOutlineColor=#000000\n# 托盘标签文本颜色\nTrayTextColor=#ffffff\n# 优先使用文字图标\nPreferTextIcon=False\n# 在图标中显示布局名称\nShowLayoutNameInIcon=True\n# 使用输入法的语言来显示文字\nUseInputMethodLanguageToDisplayText=True\n# 主题\nTheme=macOS-dark\n# 深色主题\nDarkTheme=macOS-dark\n# 跟随系统浅色/深色设置\nUseDarkTheme=False\n# 当被主题和桌面支持时使用系统的重点色\nUseAccentColor=True\n# 在 X11 上针对不同屏幕使用单独的 DPI\nPerScreenDPI=True\n# 固定 Wayland 的字体 DPI\nForceWaylandDPI=0\n# 在 Wayland 下启用分数缩放\nEnableFractionalScale=True" > ~/.config/fcitx5/conf/classicui.conf'
-rime-ice-git
+@"mkdir -p ./.hidden/pipes/dirs/themes && git clone https://github.com/thep0y/fcitx5-themes.git ./.hidden/pipes/dirs/themes"
+'./.hidden/pipes/dirs/themes'='~/.local/share/fcitx5/themes'
+rime-ice-git='mkdir -p ~/.config/fcitx5/conf && echo -e "# 垂直候选列表\nVertical Candidate List=False\n# 使用鼠标滚轮翻页\nWheelForPaging=True\n# 字体\nFont="KKong3 13"\n# 菜单字体\nMenuFont="KKong3 12"\n# 托盘字体\nTrayFont="KKong 12"\n# 托盘标签轮廓颜色\nTrayOutlineColor=#000000\n# 托盘标签文本颜色\nTrayTextColor=#ffffff\n# 优先使用文字图标\nPreferTextIcon=False\n# 在图标中显示布局名称\nShowLayoutNameInIcon=True\n# 使用输入法的语言来显示文字\nUseInputMethodLanguageToDisplayText=True\n# 主题\nTheme=macOS-dark\n# 深色主题\nDarkTheme=macOS-dark\n# 跟随系统浅色/深色设置\nUseDarkTheme=False\n# 当被主题和桌面支持时使用系统的重点色\nUseAccentColor=True\n# 在 X11 上针对不同屏幕使用单独的 DPI\nPerScreenDPI=True\n# 固定 Wayland 的字体 DPI\nForceWaylandDPI=0\n# 在 Wayland 下启用分数缩放\nEnableFractionalScale=True" > ~/.config/fcitx5/conf/classicui.conf'
 openssh=sshd;;"echo -e '\nPermitRootLogin yes' >> '/etc/ssh/sshd_config'"
+v2raya-bin=v2raya
+"v2raya"="/etc"
+extension-manager
+gnome-tweaks
+gnome-session-properties
+
+
+
 wps-office
 blender
 obsidian
@@ -44,15 +50,8 @@ vlc
 neofetch
 open-vm-tools
 qqmusic-bin
-extension-manager
 text-engine
 libbacktrace-git
-gnome-tweaks
-%vivaldi
-%alacritty
-v2raya-bin=v2raya
-"v2raya"="/etc"
-
 deepin-wine6-stable
 deepin-wine-helper
 deepin-wine-wechat
