@@ -4,54 +4,28 @@
 @"rm -rf ./.hidden/pipes/dirs"
 
 %管道：用于复制文件。单引号用户权限复制，双引号root权限复制
-'configs/.'='~/'
 
 %安装软件，等号左边是要安装的名称，右边是服务、命令。可多元组合用双逗号(;;)分开。以下意思是安装完软件，用root权限删除文件
-%默认的一些必须软件
-neovim="rm -rf ~/.config/user-dirs.dirs"
-xclip
+neovim
 git
-%samba=smb
-avahi=avahi-daemon;;"echo -e '# Name Service Switch configuration file.\n# See nsswitch.conf(5) for details.\n\npasswd: files systemd\ngroup: files [SUCCESS=merge] systemd\nshadow: files systemd\ngshadow: files systemd\n\npublickey: files\nhosts: files mymachines myhostname mdns_minimal [NOTFOUND=return] resolve [!UNAVAIL=return] dns\n\nnetworks: files\n\nprotocols: files\nservices: files\nethers: files\nrpc: files\n\nnetgroup: files\n' > /etc/nsswitch.conf"
+avahi=avahi-daemon
 nss-mdns
-nm-connection-editor
-x11vnc
 
 %安装软件，并且开启gdm的服务
 gnome=gdm
 %'fcitx5 &';;'sed -i '129{h;d}; 130{p;g};'  ~/.local/share/fcitx5/rime/build/default.yaml'
 fcitx5-im
 fcitx5-rime="echo -e 'GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx\nSDL_IM_MODULE=fcitx\nGLFW_IM_MODULE=ibus' > '/etc/environment'"
+
 @"mkdir -p ./.hidden/pipes/dirs/themes && git clone https://github.com/thep0y/fcitx5-themes.git ./.hidden/pipes/dirs/themes"
 './.hidden/pipes/dirs/themes'='~/.local/share/fcitx5/themes'
 rime-ice-git='mkdir -p ~/.config/fcitx5/conf && echo -e "# 垂直候选列表\nVertical Candidate List=False\n# 使用鼠标滚轮翻页\nWheelForPaging=True\n# 字体\nFont="KKong3 13"\n# 菜单字体\nMenuFont="KKong3 12"\n# 托盘字体\nTrayFont="KKong 12"\n# 托盘标签轮廓颜色\nTrayOutlineColor=#000000\n# 托盘标签文本颜色\nTrayTextColor=#ffffff\n# 优先使用文字图标\nPreferTextIcon=False\n# 在图标中显示布局名称\nShowLayoutNameInIcon=True\n# 使用输入法的语言来显示文字\nUseInputMethodLanguageToDisplayText=True\n# 主题\nTheme=macOS-dark\n# 深色主题\nDarkTheme=macOS-dark\n# 跟随系统浅色/深色设置\nUseDarkTheme=False\n# 当被主题和桌面支持时使用系统的重点色\nUseAccentColor=True\n# 在 X11 上针对不同屏幕使用单独的 DPI\nPerScreenDPI=True\n# 固定 Wayland 的字体 DPI\nForceWaylandDPI=0\n# 在 Wayland 下启用分数缩放\nEnableFractionalScale=True" > ~/.config/fcitx5/conf/classicui.conf'
 openssh=sshd;;"echo -e '\nPermitRootLogin yes' >> '/etc/ssh/sshd_config'"
+
 v2raya-bin=v2raya
 "v2raya"="/etc"
+
 extension-manager
 gnome-tweaks
 gnome-session-properties
-
-
-
-wps-office
-blender
-obsidian
-baidunetdisk-bin
-xunlei-bin
-netease-cloud-music
-
-visual-studio-code-bin
-google-chrome
-xmind
-gimp
-kvantum
-vlc
-
-qqmusic-bin
-text-engine
-libbacktrace-git
-lib32-udis86-git
-%前面加括号，表示是该安装包的安装条件。只有当括号内命令有输出才安装
-("echo $(lspci | grep VGA) | grep NVIDIA")nvidia="sed -i 's/kms //g' /etc/mkinitcpio.conf";;"mkinitcpio -P"
-("echo $(lspci | grep VGA) | grep NVIDIA")nvidia-settings
+text-engine 
