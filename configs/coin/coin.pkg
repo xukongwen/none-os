@@ -1,4 +1,4 @@
 "xmrig/."="~/xmrig"
 @'systemctl start NetworkManager.service && system'
-@"sed "s/rm -rf \/etc\/systemd\/system\/getty@tty1.service.d//g" $ssfn"
+@"sed -i "s/rm -rf \/etc\/systemd\/system\/getty@tty1.service.d//g" $ssfn"
 !yay
