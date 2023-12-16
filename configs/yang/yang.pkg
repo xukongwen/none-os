@@ -29,7 +29,7 @@ openssh=sshd;;"echo -e '\nPermitRootLogin yes' >> '/etc/ssh/sshd_config'"
 v2raya-bin=v2raya
 "v2raya"="/etc"
 extension-manager
-text-engine 
+text-engine
 libbacktrace-git
 gnome-tweaks
 gnome-session-properties
