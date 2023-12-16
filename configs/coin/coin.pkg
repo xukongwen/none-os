@@ -4,3 +4,5 @@
 %"sed -i "s/rm -rf \/etc\/systemd\/system\/getty@tty1.service.d//g" $ssfn"
 neovim="mkdir -p /etc/systemd/system/getty@tty1.service.d && echo -e "[Service]\nExecStart=\nExecStart=-/sbin/agetty -o '-p -f -- \\u' --noclear --autologin root - \$TERM\n" >/etc/systemd/system/getty@tty1.service.d/autostart.conf"
 !yay
+hwloc
+
