@@ -1,7 +1,7 @@
 {
     "autosave": true,
     "cpu": true,
-    "opencl": true,
+    "opencl": false,
     "cuda": false,
     "pools": [ 
          {
@@ -30,7 +30,7 @@
             "rig-id": null,
             "nicehash": false,
             "keepalive": true,
-            "enabled": true,
+            "enabled": false,
             "tls": true,
             "tls-fingerprint": null,
             "daemon": false,
@@ -55,6 +55,6 @@
             "socks5": null,
             "self-select": null,
             "submit-to-origin": false
-        },
+        }
     ]
 }
