@@ -4,12 +4,12 @@
     "opencl": true,
     "cuda": false,
     "pools": [ 
-        {
+         {
             "algo": null,
             "coin": null,
-            "url": "auto.skypool.xyz:9999",
+            "url": "auto.c3pool.org:19999",
             "user": "43g8rEujnrt82L6uNvCZMR7vnDDunTEaji3bFMz6jtWdM9fSarfjidsCseGSANNqRbWdHB6hZEQ3tUxcFd3fcKQL9G8s53A",
-            "pass": "work",
+            "pass": "worker 1",
             "rig-id": null,
             "nicehash": false,
             "keepalive": true,
@@ -20,6 +20,41 @@
             "socks5": null,
             "self-select": null,
             "submit-to-origin": false
-        }
+        },
+        {
+            "algo": null,
+            "coin": null,
+            "url": "auto.skypool.xyz:9999",
+            "user": "43g8rEujnrt82L6uNvCZMR7vnDDunTEaji3bFMz6jtWdM9fSarfjidsCseGSANNqRbWdHB6hZEQ3tUxcFd3fcKQL9G8s53A",
+            "pass": "worker 1",
+            "rig-id": null,
+            "nicehash": false,
+            "keepalive": true,
+            "enabled": true,
+            "tls": true,
+            "tls-fingerprint": null,
+            "daemon": false,
+            "socks5": null,
+            "self-select": null,
+            "submit-to-origin": false
+        },
+        {
+            "algo": null,
+            "coin": "zephyr",
+            "url": "zeph.kryptex.network:7777",
+            "user": "ZEPHYR32ERv2PXofympchi3t8JyHSX4BDcJM7r3y6YhQFnYoUbfsaw1QnrueARg8t3EFBRXatbKYMNsPE9Vnfm4nBoYFmfJYi8h39",
+            "pass": "worker 1",
+            "rig-id": null,
+            "nicehash": false,
+            "keepalive": true,
+            "enabled": true,
+            "tls": false,
+            "sni": false,
+            "tls-fingerprint": null,
+            "daemon": false,
+            "socks5": null,
+            "self-select": null,
+            "submit-to-origin": false
+        },
     ]
 }
